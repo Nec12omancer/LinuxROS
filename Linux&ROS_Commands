@@ -1,0 +1,28 @@
+1) Kill "snap" at System Monitor ==> 
+
+gnome-system-monitor
+
+2) sudo apt update && sudo apt upgrade
+
+3) sudo snap refresh
+
+
+https://askubuntu.com/questions/1412575/pending-update-of-snap-store
+
+
+https://superuser.com/questions/1723668/how-to-update-snap-store-linux-how-to-update-this
+
+
+"System Problem detected" error  ==>    sudo rm /var/crash/*
+
+Close the snap-store/software app.Go to the terminal and type ==>   pidof snap
+
+it should give you the pid of the snapstore
+Then type==>  kill pidnumber  (replace pidnumber with the pid number as above)
+
+Then type:sudo apt update
+
+sudo apt upgrade snap
+
+Set screenlock timing
+gsettings set org.gnome.desktop.session idle-delay $((5*60))
