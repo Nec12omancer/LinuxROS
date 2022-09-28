@@ -43,6 +43,10 @@ To check Ubuntu version and ROS version
 lsb_release -a     ==> show linux version
 rosdistro -d    ==> show ROS distribution
 
+To install Gedit
+================
+https://wiki.gnome.org/Apps/Gedit
+
 --------------------------------------------------------------------------------------------
 update computers:
 =================
@@ -58,4 +62,7 @@ sudo rosdep init
 
 rosdep update
 --------------------------------------------------------------------------------------------
+To install on Windows:
+======================
+https://www.msys2.org/
 
