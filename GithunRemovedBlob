@@ -1,0 +1,45 @@
+wget https://raw.githubusercontent.com/LaiYanKai/Misc/blob/main/EE3305-noetic-install.sh  -->> Old version
+
+wget https://raw.githubusercontent.com/LaiYanKai/Misc/main/EE3305-noetic-install.sh     -->> New version
+
+
+Github removed the blob word from raw links
+===========================================
+By right there is no need to do this step cos it is already installed, thus no need to install EE3305-noetic if not needed
+ 
+For the error encountered, it is related to 4308 remote controlling turtlebot.
+-------------------------------------------------------------------------------
+... logging to /home/mallab/.ros/log/4551d9e4-cb50-11ec-b9b2-9bb055cc45b5/roslaunch-mallab-Precision-7820-Tower-26020.log
+
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+RLException: Unable to contact my own server at [http://192.168.0.1:42821/].
+This usually means that the network is not configured properly.
+A common cause is that the machine cannot connect to itself.  Please check for errors by running:
+ping 192.168.0.1
+
+For more tips, please see
+http://wiki.ros.org/ROS/NetworkSetup
+--------------------------------------------------------------------------------- 
+In terminal:
+nano ~/.bashrc   or  gedit ~/.bashrc
+
+ 
+Scroll to end, comment using # in front of the lines: 
+
+export ROS_HOSTNAME=...
+export ROS_MASTER_URI=...
+
+Then save and exit with ctrl+xs then ctrl+x (nano editor)
+
+ 
+Then
+source ~/.bashrc 
+
+For all open terminals (or just close all of them and reopen)
+ 
+With that u can run ros already, no need to install after the wget step.
+
+Above Courtesy of Lai Kan Kai
