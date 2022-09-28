@@ -1,3 +1,6 @@
+
+To refresh snap
+===============
 1) Kill "snap" at System Monitor ==>   gnome-system-monitor
 2) sudo apt update && sudo apt upgrade
 3) sudo snap refresh
@@ -22,14 +25,24 @@ Set screenlock timing
 =====================
 gsettings set org.gnome.desktop.session idle-delay $((5*60))
 
+
+To remove installed ROS
+=======================
 sudo apt-get remove ros-*
 
+
+To installed ROS Noetic
+=======================
 sudo apt install ros-noetic-desktop-full
 
 sudo apt update && sudo apt upgrade --yes
 
+
+To check Ubuntu version and ROS version
+=======================================
 lsb_release -a     ==> show linux version
 rosdistro -d    ==> show ROS distribution
+
 --------------------------------------------------------------------------------------------
 update computers:
 =================
