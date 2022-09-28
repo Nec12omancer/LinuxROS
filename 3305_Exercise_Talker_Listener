@@ -1,0 +1,7 @@
+cd ~;mkdir a345b_exercise_ws;cd a345b_exercise_ws;mkdir src;cd ~/a345b_exercise_ws;catkin_make;cd ~/a345b_exercise_ws/src;catkin_create_pkg a345b_talker_listener std_msgs roscpp;cd ~/a345b_exercise_ws;catkin_make;cd ~/a345b_exercise_ws;source ./devel/setup.bash;cd ~/a345b_exercise_ws;rospack depends1 a345b_talker_listener;cd ~/a345b_exercise_ws/src/a345b_talker_listener/src;touch talker.cpp
+subl talker.cpp
+cd ~/a345b_excercise_ws/src/a345b_talker_listener/src
+touch listener.cpp
+subl listener.cpp
+cd ~/a345b_excercise_ws/src/a345b_talker_listener
+subl CMakeLists.txt
