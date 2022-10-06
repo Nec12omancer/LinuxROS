@@ -5,8 +5,9 @@ Hard Subtitles - subtitles that are hard coded to a video Subtitles are burned i
 
 Soft Subtitles - are not burned into a video. They can be enabled and disabled during the video playback. 
 
+Subtitle file types:
+====================
 SRT - any text editor to add texts to the subtitle file.
-
 ASS - more options for the subtitle styles.
 
 Adding Hard subtitles:
@@ -34,10 +35,15 @@ ffmpeg -i ouptut_english.mp4 -i subtitle.chi.srt -map 0 -map 1 -c copy -c:s mov_
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
-
+Installing and using ffmpeg
+===========================
 sudo apt install ffmpeg
 ffmpeg -i <inputfile> <outputfile>
 ffmpeg -i input.mkv output.mp4
+
+Check video codec details
+=========================
+ffmpeg ffprobe
 
 
 
