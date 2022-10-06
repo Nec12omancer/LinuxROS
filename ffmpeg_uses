@@ -58,6 +58,7 @@ ffmpeg -i <mkv-input> -c copy -map 0 -c:s mov_text <mp4-output>
 
 
 https://stackoverflow.com/questions/12131789/how-to-disable-subtitles-decoding-in-ffmpeg
+https://gist.github.com/innat/7d5511941970e8b448453980f47f9ec3
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 Installing and using ffmpeg
