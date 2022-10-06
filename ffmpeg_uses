@@ -10,6 +10,10 @@ Subtitle file types:
 SRT - any text editor to add texts to the subtitle file.
 ASS - more options for the subtitle styles.
 
+Converting SRT to ASS:
+======================
+ffmpeg -i subtitles.srt subtitles.ass
+
 Adding Hard subtitles:
 ======================
 ffmpeg -i input.mp4 -vf subtitles=subtitle.srt output_srt.mp4
@@ -25,7 +29,6 @@ ffmpeg -i input.mp4 -i subtitle.en.srt -c copy -c:s mov_text -metadata:s:s:0 lan
 language=eng sets the subtitle language to English. 
          The value for this option uses the ISO 639 language code consisting of 3 letters for every language.
 
-
 Adding Multiple Subtitles(For Soft subs)
 ========================================
 ffmpeg -i ouptut_english.mp4 -i subtitle.chi.srt -map 0 -map 1 -c copy -c:s mov_text -metadata:s:s:1 language=chi output_chi.mp4
@@ -33,6 +36,19 @@ ffmpeg -i ouptut_english.mp4 -i subtitle.chi.srt -map 0 -map 1 -c copy -c:s mov_
 -map 0 refers to the video, output_english.mp4.
 -map 1 refers to the subtitle file, subtitle.chi.srt.
 
+https://stackoverflow.com/questions/8672809/use-ffmpeg-to-add-text-subtitles
+
+MP4:
+====
+ffmpeg -i input.mp4 -f srt -i input.srt \
+-map 0:0 -map 0:1 -map 1:0 -c:v copy -c:a copy \
+-c:s mov_text output.mp4
+
+MKV:
+====
+ffmpeg -i input.mp4 -f srt -i input.srt \
+-map 0:0 -map 0:1 -map 1:0 -c:v copy -c:a copy \
+-c:s srt  output.mkv
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 Installing and using ffmpeg
@@ -44,6 +60,8 @@ ffmpeg -i input.mkv output.mp4
 Check video codec details
 =========================
 ffmpeg ffprobe 
+
+
 
 
 
