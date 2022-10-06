@@ -1,0 +1,43 @@
+https://www.bannerbear.com/blog/how-to-add-subtitles-to-a-video-file-using-ffmpeg/
+
+
+Hard Subtitles - subtitles that are hard coded to a video Subtitles are burned into the video and cannot be removed once you’ve added them.
+
+Soft Subtitles - are not burned into a video. They can be enabled and disabled during the video playback. 
+
+SRT - any text editor to add texts to the subtitle file.
+
+ASS - more options for the subtitle styles.
+
+Adding Hard subtitles:
+======================
+ffmpeg -i input.mp4 -vf subtitles=subtitle.srt output_srt.mp4
+ffmpeg -i input.mp4 -vf ass=subtitle.ass output_ass.mp4
+
+Adding Soft subtitles:
+======================
+ffmpeg -i input.mp4 -i subtitle.en.srt -c copy -c:s mov_text -metadata:s:s:0 language=eng ouptut_english.mp4
+
+-c copy specifies that the video is not to be re-encoded.
+-c:s mov_text sets the SRT file to MOV_TEXT format.
+-metadata:s:s:0 means to set the metadata for Stream:Subtitle:Number of stream, starting with 0.
+language=eng sets the subtitle language to English. 
+         The value for this option uses the ISO 639 language code consisting of 3 letters for every language.
+
+
+Adding Multiple Subtitles(For Soft subs)
+========================================
+ffmpeg -i ouptut_english.mp4 -i subtitle.chi.srt -map 0 -map 1 -c copy -c:s mov_text -metadata:s:s:1 language=chi output_chi.mp4
+
+-map 0 refers to the video, output_english.mp4.
+-map 1 refers to the subtitle file, subtitle.chi.srt.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+sudo apt install ffmpeg
+ffmpeg -i <inputfile> <outputfile>
+ffmpeg -i input.mkv output.mp4
+
+
+
