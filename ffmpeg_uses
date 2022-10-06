@@ -43,7 +43,7 @@ ffmpeg -i input.mkv output.mp4
 
 Check video codec details
 =========================
-ffmpeg ffprobe
+ffmpeg ffprobe 
 
 
 
