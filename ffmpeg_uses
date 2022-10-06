@@ -56,6 +56,9 @@ For MKV & WMV:
 ffmpeg -i input.mp4 -i input.ass -c:v copy -c:a copy -c:s copy -map 0:0 -map 0:1 -map 1:0 -y out.mkv
 ffmpeg -i <mkv-input> -c copy -map 0 -c:s mov_text <mp4-output>
 
+
+https://stackoverflow.com/questions/12131789/how-to-disable-subtitles-decoding-in-ffmpeg
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 Installing and using ffmpeg
 ===========================
