@@ -43,9 +43,19 @@ To check Ubuntu version and ROS version
 lsb_release -a     ==> show linux version
 rosdistro -d    ==> show ROS distribution
 
+To remove files
+===============
+rm -rf /u/username/.ros/log
+
 To install Gedit
 ================
 https://wiki.gnome.org/Apps/Gedit
+
+
+To Clean ROS
+============
+  rosclean check        Check usage of log files
+  rosclean purge        Remove log files
 
 --------------------------------------------------------------------------------------------
 update computers:
