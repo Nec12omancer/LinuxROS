@@ -60,6 +60,21 @@ ffmpeg -i <mkv-input> -c copy -map 0 -c:s mov_text <mp4-output>
 https://stackoverflow.com/questions/12131789/how-to-disable-subtitles-decoding-in-ffmpeg
 https://gist.github.com/innat/7d5511941970e8b448453980f47f9ec3
 
+Converting MKV & MP4:
+=====================
+https://bytexd.com/ffmpeg-how-to-convert-mkv-to-mp4/
+
+Converting without re-encoding:
+-------------------------------
+ffmpeg -i Bbear.mkv -c copy Bbear_wout.mp4  
+
+ffmpeg -i Bbear.mkv -c:v copy -c:a copy Bbear_vid-aud.mp4
+ffmpeg -i Bbear.mkv -c:v copy -c:a libvorbis Bbear_encode-AUD.mp4v
+
+Converting with re-encoding:
+-------------------------------
+ffmpeg -i Bbear.mkv -c:v copy -c:a libvorbis Bbear_encode-AUD.mp4
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 Installing and using ffmpeg
 ===========================
@@ -70,6 +85,9 @@ ffmpeg -i input.mkv output.mp4
 Check video codec details
 =========================
 ffmpeg ffprobe 
+
+ffmpeg -i Bbear.mkv
+ffprobe video.mkv
 
 
 
