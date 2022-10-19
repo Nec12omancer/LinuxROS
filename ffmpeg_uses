@@ -88,8 +88,3 @@ ffmpeg ffprobe
 
 ffmpeg -i Bbear.mkv
 ffprobe video.mkv
-
-
-
-
-
