@@ -1,0 +1,8 @@
+
+cd ~/Desktop
+
+wget https://raw.githubusercontent.com/LaiYanKai/Misc/main/EE3305-noetic-install.sh
+
+chmod +x *.sh
+
+./EE3305-noetic-install.sh
