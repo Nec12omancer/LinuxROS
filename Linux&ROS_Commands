@@ -76,3 +76,21 @@ To install on Windows:
 ======================
 https://www.msys2.org/
 
+--------------------------------------------------------------------------------------------
+
+After ROS 1 installation, when running "roscore" this sentence appears.
+'  sudo apt install python3-roslaunch '
+
+==> Has your environment been set up properly? E.g.
+Ans: In terminal, type '  echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc   '
+        this will set the environment for the running of the bashrc
+      then type,
+         '      source ~/.bashrc   '
+      and then type  '  roscore  '
+
+    to make sure that roscore runs, try to use ' gedit ~/.bashrc ' to edit the bash file to check the environment.
+save the bash file then source the file again '  source ~/.bashrc  '
+
+---------------------------------------------------------------------------------------------------------------------
+
+need to run roscore 
